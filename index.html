@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="styles.css">
+<script src="dynamic_plasma.js"></script>
+<script src="main.js"></script>
+<html>
+    <div class="root">
+        <div><b>Dynamic Plasma simulation</b></div>
+        <div class="divider-h"></div>
+        <div class="main-container">
+            <div class="controls">
+                <div class="slider-container">
+                    <div class="slider-header">
+                        <div class="slider-title">Fused account blocks</div>
+                        <div id="fusedBlockCount" class="slider-value"></div>
+                    </div>
+                    <input id="fusedBlockSlider" type="range" min="0" max="200" value="0" class="slider" oninput="onFusionSliderChange(this.value)">
+                </div>
+                <div class="slider-container">
+                    <div class="slider-header">
+                        <div class="slider-title">PoW account blocks</div>
+                        <div id="powBlockCount" class="slider-value"></div>
+                    </div>
+                    <input id="powBlockSlider" type="range" min="0" max="200" value="0" class="slider" oninput="onPowSliderChange(this.value)">
+                </div>
+                <div class="divider-h"></div>
+                <div class="resource-info">
+                    <div>Min fused QSR needed to send account block</div>
+                    <b><div id="minQsrNeeded"></div></b>
+                </div>
+                <div class="resource-info">
+                    <div>Min compute time needed to send account block</div>
+                    <b><div id="mininumWorkSecondsNeeded">QSR needed to send account block</div></b>
+                    <div class="pow-info">
+                        Assuming that it takes 30 seconds to compute the PoW
+                        <br>
+                        plasma required for a regular transaction on an average
+                        <br>
+                        consumer grade computer.
+                    </div>
+                </div>
+                <div class="divider-h"></div>
+                <button id="pausePlayButton" onclick="onPausePlayTap()">Pause</button>
+              
+            </div>
+            <div class="divider-v"></div>
+            <div class="momentum-container">
+                <div class="next-momentum-container">
+                    <div class="next-momentum-header">
+                        <div><b>Next momentum</b></div>
+                        <progress id="momentumTimer" class="progress-bar" value="0" max="98"></progress>
+                    </div>
+                    <div class="momentum-info">
+                        <div id="maxBasePlasma"></div>
+                        <div id="fusedBasePlasmaTarget"></div>
+                        <div id="powBasePlasmaTarget"></div>
+                    </div>
+                </div>
+                <div class="divider-h"></div>
+                <div id="momentumList" class="momentum-list"></div>
+            </div>
+        </div>
+    </div>
+</html>

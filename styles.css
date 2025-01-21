@@ -1,0 +1,101 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.divider-v {
+    width: 1px;
+    background-color: darkgray;
+}
+
+.divider-h {
+    height: 1px;
+    background-color: darkgray;
+}
+
+.root {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin: 1em;
+
+    .main-container {
+        display: flex;
+        gap: 3.2em;
+        margin-top: 0.8em;
+
+        .controls {
+            display: flex;
+            flex-direction: column;
+            gap: 2.4em;
+
+            .slider-container {
+                display: flex;
+                flex-direction: column;
+                gap: 0.8em;
+                width: 340px;
+            
+                .slider-header {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+
+            .resource-info {
+                display: flex;
+                flex-direction: column;
+                gap: 0.8em;
+
+                .pow-info {
+                    font-size: 14px;
+                    margin-top: 0.8em;
+                }
+            }
+        }
+    }
+
+    .momentum-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1.8em;
+
+        .momentum-info {
+            width: 700px;
+            background-color: rgb(233, 233, 233);
+            border-radius: 5px;
+            padding: 0.8em;
+
+            .info-item {
+                display: flex;
+                flex-direction: column;
+                gap: 0.4em;
+                margin: 1.6em;
+            }
+        }
+
+        .next-momentum-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8em;
+
+      
+            .next-momentum-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                div {
+                    flex: 3;
+                }
+
+                .progress-bar {
+                    flex: 7;
+                }
+            }
+        }
+
+        .momentum-list {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
